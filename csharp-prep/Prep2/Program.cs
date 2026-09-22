@@ -1,9 +1,24 @@
 using System;
 
 class Program
-{
+{    
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep2 World!");
+        int x = 9;
+        int y = 30;
+        int z = 30;
+        if (x == 10 && y == 30 || z ==30)
+        {
+            Console.WriteLine("X is 10");
+            Console.WriteLine("Y is fun");
+        }
+        else if (x ==20)
+        {
+            Console.WriteLine("X is 10");
+        }
+        else
+        {
+                Console.WriteLine("Default output");
+        }
     }
 }
