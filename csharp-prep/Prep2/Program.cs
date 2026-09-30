@@ -4,21 +4,34 @@ class Program
 {    
     static void Main(string[] args)
     {
-        int x = 9;
-        int y = 30;
-        int z = 30;
-        if (x == 10 && y == 30 || z ==30)
+        string letter = "";
+        Console.Write("What is your grade percentage? ");
+        int grade = int.Parse(Console.ReadLine());
+
+        if (grade >= 90)
         {
-            Console.WriteLine("X is 10");
-            Console.WriteLine("Y is fun");
+            letter = "A";
         }
-        else if (x ==20)
+        else if (grade >= 80)
         {
-            Console.WriteLine("X is 10");
+            letter = "B";
+        }
+        else if (grade >= 70)
+        {
+            letter = "C";
+        }
+        else if (grade >= 60)
+        {
+            letter = "D";
+        }
+        if (grade > 69)
+        {
+            Console.WriteLine($"Your grade is a {letter}.");
         }
         else
         {
-                Console.WriteLine("Default output");
+            Console.WriteLine("Sorry you did not pass the class.");
         }
+
     }
 }
