@@ -9,16 +9,16 @@ class Program
         int guess = -1;
         do
         {
-        Console.WriteLine("What is your magic number?");
+        Console.Write("What is your magic number? ");
         string user_guess = Console.ReadLine();
         guess = int.Parse(user_guess);
         if(guess > magicNumber)
             {
-                Console.WriteLine("Lower");
+                Console.Write("Lower, ");
             }
         else if(guess < magicNumber)
             {
-                Console.WriteLine("Higher");
+                Console.Write("Higher, ");
             };
 
         
