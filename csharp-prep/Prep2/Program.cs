@@ -30,7 +30,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("Sorry you did not pass the class.");
+            Console.WriteLine("Sorry, you did not pass the class.");
         }
 
     }
