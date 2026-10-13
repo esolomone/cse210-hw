@@ -21,16 +21,15 @@ class Program
         numbers.Add(userInput);
         }
         while(userInput != 0);
-        
+
         foreach (int number in numbers)
         {
-
             sum += number;
         }
         numbers.Sort();
         min = numbers[0];
         max = numbers[numbers.Count - 1];
-        double average = sum/numbers.Count;
+        float average = (float)sum/numbers.Count;
         Console.WriteLine($"The sum is {sum}");
         Console.WriteLine($"The average is {average}");
         Console.WriteLine($"The highest number is {max}");
