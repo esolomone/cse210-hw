@@ -8,7 +8,6 @@ class Program
     {    
         int userInput;
         int sum = 0;
-        int average;
         int min = 0;
         int max = 0;
 
@@ -19,21 +18,20 @@ class Program
         Console.Write("Enter a number: ");
         userInput = int.Parse(Console.ReadLine());
         numbers.Add(userInput);
-
+        
         }while(userInput != 0);
         foreach (int number in numbers)
         {
-            if(number > max)
-            {
-                max = number;
-            }
-            else if(number < min)
-            {
-                min = number;
-            }
             sum += number;
-            average = sum/numbers.Count;
-
         }
+        numbers.Sort();
+        min = numbers[0];
+        max = numbers[numbers.Count - 1];
+        int average = sum/numbers.Count;
+        Console.WriteLine($"The sum is {sum}");
+        Console.WriteLine($"The average is {average}");
+        Console.WriteLine($"The highest number is {max}");
+        Console.WriteLine($"The lowest number is {min}");
+
     }
 }
