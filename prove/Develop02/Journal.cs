@@ -1,12 +1,12 @@
 class Journal
 {
-public List<JournalEntry> _entries;
+public List<Entry> _entries;
 
 public void DisplayJournal()
 {
-    foreach(JournalEntry entry in _entries)
+    foreach(Entry entry in _entries)
     {
-        entry.DisplayJournalEntry();
+        entry.Display();
     }
 }
 

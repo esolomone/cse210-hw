@@ -1,4 +1,4 @@
-class JournalEntry
+class Entry
 {
     public string _date; //attributes
     public string _prompt;
@@ -6,13 +6,13 @@ class JournalEntry
 
     
 
-    public void DisplayJournalEntry()
+    public void DisplayEntry()
     {
         Console.Write($"{_date}, {_prompt}"); // displays contents on screen
         Console.WriteLine(_response);
     }
 
-    public void CreateJournalEntry()
+    public void CreateEntry()
     {
         string [] prompts =
         {
