@@ -1,6 +1,8 @@
 using System;
 using System.IO; 
-
+// the extra things I added were when loading from a file, it will automatically load the data and 
+// add it to the journal without adding duplicate entries. This way you can save/load from the same
+// file over and over. Add comments where I added smaller functionality like error handling. 
 public class Program
 {
     static void Main(string[] args)
