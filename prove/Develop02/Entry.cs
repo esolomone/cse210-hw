@@ -1,4 +1,4 @@
-class Entry
+public class Entry
 {
     public string _date; //attributes
     public string _prompt;
@@ -14,16 +14,19 @@ class Entry
 
     public void CreateEntry()
     {
-        string [] prompts =
+        Random randomNumber = new Random();
+        string[] prompts =
         {
-            "How was your day. ",
-            "Talk about someone you met.",
-            "Talk about a significant event in your day",
-            "What were you grateful for today?"
+            "\u001b[3mHow was your day? \u001b[0m",
+            "\u001b[3mTalk about someone you met. \u001b[0m",
+            "\u001b[3mTalk about a significant event in your day \u001b[0m",
+            "\u001b[3mWhat were you grateful for today? \u001b[0m",
+            "\u001b[3mDid you do anything nice for someone else today? \u001b[0m",
+            "\u001b[3mHow were you blessed today? \u001b[0m"
 
         };
         _date = DateTime.Now.ToString(); 
-        _prompt = prompts[0];
+        _prompt = prompts[randomNumber.Next(0, prompts.Length)];
         Console.Write($"{_prompt}");
         _response = Console.ReadLine();
     }
