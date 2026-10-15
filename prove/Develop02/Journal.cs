@@ -12,6 +12,8 @@ public void DisplayJournal()
     {
         entry.DisplayEntry();
     }
+    Console.Write("Press enter to continue");
+    Console.Read();
 }
 
 public void CreateEntry()
@@ -29,15 +31,15 @@ public void ReadFile()
     {
         string[] parts = line.Split('|');
         {
-            Entry loadedEntry = new Entry();
-            loadedEntry._date = parts[0];
+            Entry loadedEntry = new Entry(); //instead of displaying the file, the following code adds it to the journal, and can be viewed with display
+            loadedEntry._date = parts[0]; 
             loadedEntry._prompt = parts[1];
             loadedEntry._response = parts[2];
             bool duplicateEntry = _entries.Any(entry => entry._date == parts[0]);
-            if (!duplicateEntry)
+            if (!duplicateEntry) // checks to see if entry is already present, and if  not it adds it to the list, so you can load from same file multiple times
                 {
                 _entries.Add(loadedEntry); 
-                _entries = _entries.OrderBy(entry => entry._date).ToList();  //or             
+                _entries = _entries.OrderBy(entry => entry._date).ToList();  //after loading entries from file, it orders the entries list             
                 }
 
         }
@@ -59,6 +61,6 @@ public void SaveFile()
         }
     }
     
-    Console.WriteLine("Journal entries saved!");
+    Console.WriteLine("Journal entries saved to file!");
 }
 }

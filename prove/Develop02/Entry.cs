@@ -17,7 +17,7 @@ public class Entry
         Random randomNumber = new Random();
         string[] prompts =
         {
-            "\u001b[3mHow was your day? \u001b[0m",
+            "\u001b[3mHow was your day? \u001b[0m", // added italics to distinguish response from prompt
             "\u001b[3mTalk about someone you met. \u001b[0m",
             "\u001b[3mTalk about a significant event in your day \u001b[0m",
             "\u001b[3mWhat were you grateful for today? \u001b[0m",
